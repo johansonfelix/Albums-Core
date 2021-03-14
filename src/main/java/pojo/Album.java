@@ -18,7 +18,9 @@ public class Album implements Serializable {
     @XmlElement
     private String releaseYear;
     @XmlElement
-    private Artist artist;
+    private String artistFirstName;
+    @XmlElement
+    private String artistLastName;
 
     private byte[] cover_img;
 
@@ -57,13 +59,36 @@ public class Album implements Serializable {
     public void setReleaseYear(String releaseYear) {
         this.releaseYear = releaseYear;
     }
+    public String getArtistFirstName() {
+        return artistFirstName;
+    }
 
+    public void setArtistFirstName(String artistFirstName) {
+        this.artistFirstName = artistFirstName;
+    }
+
+    public String getArtistLastName() {
+        return artistLastName;
+    }
+
+    public void setArtistLastName(String artistLastName) {
+        this.artistLastName = artistLastName;
+    }
+
+    public byte[] getCover_img() {
+        return cover_img;
+    }
+
+    public void setCover_img(byte[] cover_img) {
+        this.cover_img = cover_img;
+    }
 
     public String toString(){
         return "ISRC: " + ISRC +", " +
                 "Title: " + title + ", " +
                 "Description: " + description + ", " +
                 "Release year: " + releaseYear + ", " +
-                "Artist: " + artist;
+                "Artist first name: " + artistFirstName + ", " +
+                "Artist last name: " + artistLastName;
     }
 }
