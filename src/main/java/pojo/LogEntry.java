@@ -5,8 +5,6 @@ enum type_of_change{CREATE, UPDATE, DELETE;}
 
 public class LogEntry {
 
-
-
     private int id;
     private Timestamp timestamp;
     private type_of_change t;
