@@ -11,17 +11,15 @@ public class LogEntry {
     private Timestamp timestamp;
     private type_of_change t;
     private String ISRC;
+    public LogEntry(){
 
-    public LogEntry(){}
-
+    }
     public Timestamp getTimestamp() {
         return timestamp;
     }
-
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
     }
-
     public String getISRC() {
         return ISRC;
     }
