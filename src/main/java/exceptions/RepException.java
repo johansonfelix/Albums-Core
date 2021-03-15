@@ -10,4 +10,15 @@ public class RepException extends Exception implements Serializable {
         super(message);
         this.message = message;
     }
+
+    public RepException(){}
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
