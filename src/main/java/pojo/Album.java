@@ -21,7 +21,7 @@ public class Album implements Serializable {
     private String artistFirstName;
     @XmlElement
     private String artistLastName;
-
+    @XmlElement
     private byte[] cover_img;
 
 
