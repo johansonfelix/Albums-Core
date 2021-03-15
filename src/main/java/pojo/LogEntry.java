@@ -1,9 +1,10 @@
 package pojo;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 enum type_of_change{CREATE, UPDATE, DELETE;}
 
-public class LogEntry {
+public class LogEntry implements Serializable {
 
     private int id;
     private Timestamp timestamp;
