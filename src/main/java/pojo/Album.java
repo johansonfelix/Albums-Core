@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.util.Base64;
 
 @XmlRootElement
 public class Album implements Serializable {
@@ -21,7 +22,7 @@ public class Album implements Serializable {
 
     private String artistLastName;
 
-    private byte[] cover_img;
+    private CoverImage coverImage;
 
 
     public Album(){
@@ -75,12 +76,12 @@ public class Album implements Serializable {
         this.artistLastName = artistLastName;
     }
 
-    public byte[] getCover_img() {
-        return cover_img;
+    public CoverImage getCoverImage() {
+        return coverImage;
     }
 
-    public void setCover_img(byte[] cover_img) {
-        this.cover_img = cover_img;
+    public void setCoverImage(CoverImage coverImage) {
+        this.coverImage = coverImage;
     }
 
     public String toString(){
@@ -88,6 +89,7 @@ public class Album implements Serializable {
                 "Title: " + title + ", " +
                 "Description: " + description + ", " +
                 "Release year: " + releaseYear + ", " +
+                "Cover Image : ["+ coverImage.toString()+"], " +
                 "Artist first name: " + artistFirstName + ", " +
                 "Artist last name: " + artistLastName;
     }
