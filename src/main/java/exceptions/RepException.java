@@ -1,9 +1,14 @@
 package exceptions;
 
-import java.io.IOException;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.ws.WebFault;
 import java.io.Serializable;
 
-public class RepException extends Exception implements Serializable {
+@WebFault(name = "RepException")
+public class RepException extends Exception{
+
+
     String message;
 
     public RepException(String message){
