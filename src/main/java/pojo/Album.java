@@ -9,21 +9,20 @@ import java.util.Base64;
 
 @XmlRootElement
 public class Album implements Serializable {
-
+    @XmlElement(name = "ISRC")
     private String ISRC;
-
+    @XmlElement(name = "title")
     private String title;
-
+    @XmlElement(name = "description")
     private String description;
-
+    @XmlElement(name = "releaseYear")
     private String releaseYear;
-
+    @XmlElement(name = "artistFirstName")
     private String artistFirstName;
-
+    @XmlElement(name = "artistLastName")
     private String artistLastName;
-
+    @XmlElement(name = "coverImage")
     private CoverImage coverImage;
-
 
     public Album(){
 

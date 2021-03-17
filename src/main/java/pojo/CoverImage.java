@@ -1,11 +1,16 @@
 package pojo;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
+@XmlRootElement
 public class CoverImage implements Serializable {
 
-    String base64attachment;
-    String mimeType;
+    @XmlElement(name = "base64attachment")
+    private String base64attachment;
+    @XmlElement(name = "mimeType")
+    private String mimeType;
 
     public CoverImage(){}
 
