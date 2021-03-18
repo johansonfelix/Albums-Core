@@ -9,7 +9,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Albums-Core" target="15" />
+      <module name="Albums-Core" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
