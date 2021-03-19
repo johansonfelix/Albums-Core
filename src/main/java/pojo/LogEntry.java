@@ -1,23 +1,28 @@
 package pojo;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.sql.Timestamp;
 enum type_of_change{CREATE, UPDATE, DELETE;}
 
+@XmlRootElement
 public class LogEntry implements Serializable {
-
+//    @XmlElement(name = "id")
     private int id;
-    private Timestamp timestamp;
+//    @XmlElement(name = "typeOfChange")
     private type_of_change t;
+//    @XmlElement(name = "timestamp")
+    private String timestampString;
+//    @XmlElement(name = "ISRC")
     private String ISRC;
+
     public LogEntry(){
 
     }
-    public Timestamp getTimestamp() {
-        return timestamp;
-    }
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+    public String getTimestampString(){return timestampString;}
+    public void setTimestampString(String timestampString){
+        this.timestampString = timestampString;
     }
     public String getISRC() {
         return ISRC;
@@ -68,7 +73,7 @@ public class LogEntry implements Serializable {
     public String toString(){
         String str = "";
         str += "ID: " + Integer.toString(id) + "\n";
-        str += "Timestamp: " + timestamp.toString() + "\n";
+        str += "Timestamp: " + timestampString + "\n";
         str += "Type of change: " + typeOfChangeToString(t) + "\n";
         str += "ISRC: " + ISRC + "\n";
         return str;
